@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec-mocks', '~> 3.1.3', '>= 3.1'
   spec.add_development_dependency 'webmock', '~> 1.20.4', '>= 1.20'
 
-  spec.add_runtime_dependency 'asciidoctor', '~> 1.5.2', '>= 1.5'
-  spec.add_runtime_dependency 'faraday', '~> 0.9.1', '>= 0.9'
+  spec.add_runtime_dependency 'asciidoctor', '~> 2.0.26', '>= 2.0'
+  spec.add_runtime_dependency 'faraday', '~> 2.14.0', '>= 2.14'
   spec.add_runtime_dependency 'json', '~> 1.8.2', '>= 1.8.2'
 end

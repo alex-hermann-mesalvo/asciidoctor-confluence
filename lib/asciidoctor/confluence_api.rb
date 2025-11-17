@@ -27,7 +27,7 @@ module Asciidoctor
           faraday.adapter Faraday.default_adapter
         end
 
-        conn.basic_auth(@auth[:username], @auth[:password]) unless @auth.nil?
+        conn.set_basic_auth(@auth[:username], @auth[:password]) unless @auth.nil?
         conn
       end
 

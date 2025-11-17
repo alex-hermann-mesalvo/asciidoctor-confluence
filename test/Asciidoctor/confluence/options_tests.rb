@@ -1,10 +1,14 @@
 require 'test/unit'
 require 'asciidoctor/confluence/options'
+require 'stringio'
 
 class OptionsTests < Test::Unit::TestCase
   def setup
     @orig_stderr = $stderr
-    $stderr = StringIO.new
+    path = 't.tmp'
+    fd = IO.sysopen(path) # => 3
+    IO.new(fd)
+    $stderr = IO.new(fd)
   end
 
   def teardown
@@ -32,12 +36,11 @@ class OptionsTests < Test::Unit::TestCase
   end
 
   def test_with_full_options
-    args = {:confluence => {:host => 'http://hostname/', :space_key => 'TEST_KEY', :title =>'Test title'}}
+    args = {:confluence => {:host => 'http://hostname/', :space_key => 'TEST_KEY', :title => 'Test title'}}
     options = Asciidoctor::Confluence::Options.new args
     res = options.check_mandatory_options
     assert_equal 1, res
-    assert_true $stderr.string.nil_or_empty?
-
+    assert_true $stderr.string.nil? || $stderr.string.empty?
   end
   
   def test_host_not_present
