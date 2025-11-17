@@ -54,7 +54,7 @@ module Asciidoctor
         rescue Exception => e
           show_error get_action_string, e.message
         end
-        return 0
+        0
       end
 
       def get_action_string

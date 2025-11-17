@@ -18,14 +18,16 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency 'bundler', '~> 1.7'
-  spec.add_development_dependency 'rake',  '~> 10.4', '>= 10.4.2'
-  spec.add_development_dependency 'test-unit',  '~> 3.0', '>= 3.0.9'
-  spec.add_development_dependency 'rspec', '~> 3.1.0', '>= 3.1'
-  spec.add_development_dependency 'rspec-mocks', '~> 3.1.3', '>= 3.1'
-  spec.add_development_dependency 'webmock', '~> 1.20.4', '>= 1.20'
+  spec.add_development_dependency 'bundler', '~> 2.2'
+  spec.add_development_dependency 'rake',  '~> 10.4'
+  spec.add_development_dependency 'test-unit',  '~> 3.0'
+  spec.add_development_dependency 'rspec', '~> 3.1'
+  spec.add_development_dependency 'rspec-mocks', '~> 3.1'
+  spec.add_development_dependency 'webmock', '~> 1.20'
 
-  spec.add_runtime_dependency 'asciidoctor', '~> 1.5.2', '>= 1.5'
-  spec.add_runtime_dependency 'faraday', '~> 0.9.1', '>= 0.9'
-  spec.add_runtime_dependency 'json', '~> 1.8.2', '>= 1.8.2'
+  spec.add_runtime_dependency 'asciidoctor', '~> 2.0'
+  spec.add_runtime_dependency 'asciidoctor-diagram', '~> 2.2'
+  spec.add_runtime_dependency 'asciidoctor-plantuml', '~> 0.1.1'
+  spec.add_runtime_dependency 'faraday', '~> 2.14.0'
+  spec.add_runtime_dependency 'json', '~> 1.8.2'
 end
